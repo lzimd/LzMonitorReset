@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorReset", "MonitorReset\MonitorReset.csproj", "{D80CD095-9209-45AB-9BC0-76A3B8BED880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D80CD095-9209-45AB-9BC0-76A3B8BED880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80CD095-9209-45AB-9BC0-76A3B8BED880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80CD095-9209-45AB-9BC0-76A3B8BED880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80CD095-9209-45AB-9BC0-76A3B8BED880}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28BCA776-49D5-4118-8591-5FB007E797DE}
+	EndGlobalSection
+EndGlobal

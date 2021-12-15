@@ -1,0 +1,13 @@
+﻿<Application x:Class="MonitorReset.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MonitorReset"
+             StartupUri="MainWindow.xaml"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+    <Application.Resources>
+         
+        <System:String x:Key="WindowTitle">Monitor Reset</System:String>
+        <System:Double x:Key="WindowMinWidth">800</System:Double>
+        <System:Double x:Key="WindowMinHeight">600</System:Double>
+    </Application.Resources>
+</Application>
