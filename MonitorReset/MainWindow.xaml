@@ -9,8 +9,8 @@
          Title="{DynamicResource WindowTitle}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*" />
             <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="40*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="30" Height="50*" />

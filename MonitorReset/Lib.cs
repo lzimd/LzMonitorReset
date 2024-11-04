@@ -118,7 +118,7 @@ namespace LibMR
                         var proc = new ProcWindow
                         {
                             Hwnd = hwnd,
-                            Name = PInvoke.User32.GetWindowText(hwnd),
+                            Name = $"{PInvoke.User32.GetWindowText(hwnd)} - {PInvoke.User32.GetClassName(hwnd)}",
                             ProcId = procId,
                             ThreadId = threadId,
                             Window = new(info.rcWindow)

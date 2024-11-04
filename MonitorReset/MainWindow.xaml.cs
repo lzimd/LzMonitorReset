@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -92,11 +93,12 @@ namespace MonitorReset
         {
             // text
             this.text_info.FontFamily = new("Global Monospace");
-            this.text_info.Text = $"process : [ {procWindow.ProcId} ]\n"
-                                + $"thread  : [ {procWindow.ThreadId} ]\n\n"
+            this.text_info.Text = $"window  : [ 0x{procWindow.Hwnd:X8} ]\n"
+                                + $"process : [ {procWindow.ProcId,5} ]\n"
+                                + $"thread  : [ {procWindow.ThreadId,5} ]\n\n"
                                 + $"top     : {procWindow.Window.top,5}\n"
-                                + $"left    : {procWindow.Window.bottom,5}\n"
-                                + $"bottom  : {procWindow.Window.left,5}\n"
+                                + $"bottom  : {procWindow.Window.bottom,5}\n\n"
+                                + $"left    : {procWindow.Window.left,5}\n"
                                 + $"right   : {procWindow.Window.right,5}\n";
 
             string currName = $"window_{procWindow.Hwnd}";
@@ -172,6 +174,20 @@ namespace MonitorReset
             }
 
             var displays = LibMR.Gdi.GetDisplays();
+            {
+                // handle multi monitors
+                // ; OriginX, OriginY
+                int minX = virtualScreen.Width, minY = virtualScreen.Height;
+                foreach (var display in displays)
+                {
+                    minX = Math.Min(minX, display.Monitor.left);
+                    minY = Math.Min(minY, display.Monitor.top);
+                }
+                OriginX = OriginX - minX / Scale;
+                OriginY = OriginY - minY / Scale;
+            }
+
+
 
             foreach (var display in displays)
             {
